@@ -1,0 +1,615 @@
+***************************************************
+****** Everything in python is Object *************
+****** Every object contains set of methods *******
+***************************************************
+There are 6 builtin objects
+
+
+number
+------
+number can be integer or decimal or octal or hexa
+
+num = 10
+print(num)
+anum = 45.5
+print(anum)
+
+
+string
+-------
+String can be defined in single or double or triple quotes
+
+name = 'python programming'
+aname = "hadoop administration"
+bname = """java programming"""
+
+
+
+list  ( array in C )
+-------------------
+list contains set of elements.
+Elements can be set of numbers or strings of any combination
+Elements are defined in [].
+
+
+alist = [10,20,30,40]
+blist = ["unix","linux","hadoop"]
+clist = [430,4,45.43,"linux"]
+
+
+
+tuple   ( READ ONLY , IMMUTABLE )
+-------
+tuple contains set of elements.
+Elements can be set of numbers or strings of any combination
+Elements are defined in ().
+**********  Elements inside tuple cannot be modified **************
+
+atup = (433,43,43)
+btup = ("perl","java","hadoop",43)
+
+
+
+dictionary
+-------------------
+-dictionary contains elements in key:value pairs
+-dictionary elements are defined in {} .
+-In dictionary , keys are always UNIQUE
+- In dictionary ,  key will be either NUMBER OR STRING
+
+
+Syntax:  object=  { key : value , key:value , key:value }
+                    -----------    --------   ----------
+                      item1        item2        item3
+
+
+Emample: adict =  { "chap1":10  ,"chap2":20 ,"chap3":30} 
+
+         values = {1:2 ,3:4 , 5:6 }
+
+         info   = {"emp1":[101,"UK","Paul"] , "emp2":[102,"US", "Raj"] }   # data structure
+
+
+set
+-----
+set is simply UNORDERED collection of UNIQUE elements of same type
+set elements are defined in {}.
+********** Indexing is NOT allowed in set ************
+
+
+example:
+
+aset = {10,10,10,20,30}   # 3
+
+
+
+commenting in python
+------------------
+
+
+single line comment   :   line starts with #
+-----------------
+
+multi line comments   :
+-----------------------
+all the lines defined in between in ''' and '''  are ignored by interpreted
+
+'''
+all
+these
+lines
+are
+commented
+'''
+
+
+
+functions
+----------
+-builtin functions
+-user defined functions
+
+
+builtin functions
+----------------
+print()
+len()
+range()
+input()
+raw_input()     #python2.x
+max()
+min()
+sum()
+open()
+zip()
+help()
+dir()
+type()
+isinstance()
+
+conversion functions ( typecasting functions )
+set()
+list()
+int()
+str()
+set()
+dict()
+float()
+oct()
+hex()
+
+How to display all the lits of BUILTIN FUNCTIONS
+
+In the console
+
+dir(__builtins__)
+
+operators
+-------------
+
+
+arithmetic operators :  + - *  % /
+
+assignment operators ( ++ and -- are NOT allowed in python )
+--------------------
+
+val = 10
+
+val = val + 10  (or) val+=10       #20
+val = val - 10  (or) val-=10    
+
+
+logical operators
+------------------
+              expr1                expr2
+             -------------------------------
+and      if  len(name) > 5  and name.isupper() :    # both the conditions should be satisfied
+or       if  len(name) > 5  or name.isupper() :     # if either of the condition is satisfied
+not      if not name.isupper() :
+
+
+relational operators
+----------------------
+< > <= >= == !=
+
+
+special operators
+------------------
+in
+as
++  ( concatenation operator )
+*  
+
+
+
+
+
+
+statements
+------------
+
+
+conditional statments
+--------------------
+if
+if-else
+if-elif-elif-elif.... else
+
+
+control statements
+-----------------
+for loop
+while loop
+
+
+jump statements
+---------------
+break
+continue
+
+
+
+file handling
+-------------
+
+- working with flat files  (  txt csv log conf properties tsv )
+------------------------------------------------------------------
+
+modes : r        w          a
+
+
+read
+----
+syntax :   object = open(filename,mode)
+example:     fobj = open("abc.txt","r")
+
+            case1: If the file is not existing ,  it throws error
+            case2: If the file already exists ,  it will read the file
+
+write
+------
+syntax :   object = open(filename,mode)
+example:     fobj = open("customers.txt","w")
+            
+            case1: If the file is not existing , file will be created
+            case2: If the file already exists ,  it overwrites the file
+append
+-------
+syntax :   object = open(filename,mode)
+example:     fobj = open("customers.txt","a")
+
+            case1: If the file is not existing , file will be created
+            case2: If the file already exists ,  it appends the data to the file
+
+closing the file
+--------------
+obj.close()
+
+
+- working with third party files ( ppt docx pdf ..... )
+
+
+
+
+
+
+
+
+ 
+
+reading the file
+-----------------
+
+- reading  line by line
+- read()     -----------> read the whole file in the single string
+- readlines() ----------> reading the file in the list format . Each line in the file is one single element of the list
+- csv library
+- pandas library
+
+
+
+Exception handling
+----------------
+There are 2 types of errors
+
+1. syntax error
+2. runtime error
+
+Handling the exceptions in the runtime is known as exception handling
+
+
+keywords
+-----------
+
+try
+except  
+else   ( optional)
+finally( optional)
+
+
+
+
+
+user defined functions : Depending on the task/requirement, it is the job of developer to define user define function for 
+the reusability purpose.
+
+
+passing arguments
+----------------
+
+
+fixed arguments
+
+default arguments
+
+variable length arguments
+
+library/ package/ module
+------------------------
+
+Every library contains some set of methods.
+
+builtin libraries :  Builtin libraries are generally used by everyone  ( os activities , copy , string , random 									,multithreading, file operations)
+
+
+third party libraries : 
+---------------------
+Depending on the cutomized requirement(cloud operations, excel , database , remote infra , ML) , devloper has to install the third party libraries from www.pypi.org  or using pip tool
+
+
+
+working with libraries
+-------------------------
+
+importing all the methods
+------------------------
+import math       ( all the methods will be imported to the program namespace )
+print(math.log(2))
+
+
+importing with alias name
+-------------------------
+import math as m
+print(m.tan(3))
+print(m.log(2))
+
+
+importing required methods ONLY
+--------------------------------
+from math import tan,log,floor             . cannot be used in this context
+print(tan(2))                             
+print(log(3))
+print(floor(34.3))
+
+
+
+8000+  builtin libraries
+250000+ third party library
+
+
+
+
+
+requirements
+-------------
+
+delete the file                    : os.remove(filename)
+
+
+list of the files                  :   os.listdir(path)
+
+create the directory                :   os.mkdir(dirname)
+
+
+copy files from one path to another : shutil.copy(source,destination)
+
+
+generate 4 digit random number     :  random.random()
+
+
+connect to mysql database          :  pymysql   
+
+connect to oracle    database      :  cx_Oracle
+
+connect to mongodb                 :  pymongo
+
+
+
+installing manually
+-------------------
+open pypi.org and search for the required library
+
+download, extract and nagivate to the library folder
+
+import setup.py install
+
+x -> y -> a ->b
+
+
+.xlsx / .xls
+-------------
+
+xlwt
+xlsxwriter :  writing
+openpyxl   :  read/write
+xlrd
+pyexcel    : read/write
+
+
+
+
+
+
+
+
+python's default database is sqlite3
+
+
+
+
+
+
+
+
+display all databases
+-------------------
+show databases ;
+
+creating database
+------------------
+create database ideas ;
+show databases ;
+
+access your database
+-------------------
+use ideas ;
+
+display all the  tables 
+-------------
+show tables ;
+
+creating the table
+----------------
+create table realestate( street varchar(500), city varchar(500) );
+
+display all the records   ( empty )
+----------------------- 
+select * from realestate ;
+
+inserting records
+------------------
+insert into realestate values('MG Road','Hyderabad');
+insert into realestate values('Kothrud','Pune');
+
+
+display all the records  
+----------------------- 
+select * from realestate ;
+
+
+
+
+
+re
+------
+match       re.match()   --> check at the beginning of the string
+search      re.search    --> anywhere in the string
+replacing   re.sub()     --> replacing
+split       re.split()   --> split the string
+
+
+metacharacters (or) wildcard characters
+---------------------------------------
+
+^   : match at the beginning of the string
+      re.search('^python', string)
+
+$   : match at the end of the string  ( if the string is ending with python or not)
+      re.search('python$', string)
+
+.   : any single character
+      re.search('.ython', string)
+
+*   : zero or more occurences of the preceding character
+      re.search('pyt*hon", string)
+      python          valid       
+      pyttttthon      valid
+      pyttttttttthon  valid
+      pyhon           valid
+
++   : one or more occurences of the preceding character
+      re.search('pyt+hon", string)
+
+      python          valid       
+      pyttttthon      valid
+      pyttttttttthon  valid
+      pyhon           Invalid
+
+
+(str1|str2) : either str1 or str2
+      
+     re.search("python|hadoop", string)
+
+
+[]   : character class  ( one of the character)
+
+      re.search("[qwet]ython",string)
+      qython   valid
+      wython   valid
+      eython   valid
+      tython   valid
+      bython   Invalid
+
+
+{min,max} : min to max occurences of the preceding character
+        
+         re.search("pyt{2,5}hon",string)
+       
+         python      : Invalid
+         pytthon     : Valid
+         pytttthon   : Valid
+         pytttttttttthon: Invalid
+
+\d    :  digit
+
+\s    :  whitespace
+
+\b    : boundary
+
+
+
+- emailid
+- IP address
+
+
+abc.df@gmail.com
+abc.df@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
